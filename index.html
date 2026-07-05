@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Casa Unifamiliar El Salitrillo | Puerto Vallarta</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+color:white;
+background:
+linear-gradient(rgba(0,0,0,.68),rgba(0,0,0,.90)),
+url('images/hero.jpg');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+overflow-x:hidden;
+}
+
+/* NAV */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+padding:14px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.60);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(212,175,55,.18);
+}
+
+.navbar img{
+width:125px;
+}
+
+.nav-links{
+display:flex;
+gap:22px;
+flex-wrap:wrap;
+align-items:center;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:14px;
+font-weight:600;
+}
+
+.nav-links a:hover{
+color:#d4af37;
+}
+
+.music-btn{
+background:transparent;
+color:#d4af37;
+border:1px solid rgba(212,175,55,.55);
+padding:8px 16px;
+border-radius:30px;
+cursor:pointer;
+font-weight:700;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:160px 7% 100px;
+background:rgba(0,0,0,.35);
+}
+
+.hero-content{
+max-width:1200px;
+margin:auto;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+.logo-main{
+width:280px;
+max-width:80%;
+margin:0 auto 30px;
+display:block;
+}
+
+.badge{
+display:inline-block;
+padding:11px 26px;
+border:1px solid rgba(212,175,55,.50);
+border-radius:40px;
+color:#d4af37;
+letter-spacing:4px;
+font-size:13px;
+text-transform:uppercase;
+background:rgba(0,0,0,.38);
+margin-bottom:30px;
+}
+
+h1{
+font-family:'Playfair Display',serif;
+font-size:82px;
+line-height:1.05;
+color:#d4af37;
+margin-bottom:22px;
+text-align:center;
+}
+
+.sub{
+font-size:23px;
+line-height:1.7;
+color:#eee;
+margin-bottom:25px;
+text-align:center;
+}
+
+.price{
+font-size:48px;
+font-weight:800;
+color:white;
+margin:25px 0 8px;
+}
+
+.cash{
+color:#d4af37;
+font-weight:800;
+font-size:18px;
+margin-bottom:32px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:40px;
+text-decoration:none;
+font-weight:800;
+margin:8px;
+transition:.3s;
+background:#d4af37;
+color:#000;
+}
+
+.btn:hover{
+background:white;
+transform:translateY(-3px);
+}
+
+.btn-outline{
+background:rgba(0,0,0,.35);
+border:1px solid rgba(212,175,55,.55);
+color:#d4af37;
+}
+
+/* SECTIONS */
+
+.section{
+max-width:1200px;
+margin:0 auto 45px;
+padding:75px 7%;
+background:rgba(0,0,0,.58);
+backdrop-filter:blur(12px);
+border:1px solid rgba(212,175,55,.16);
+border-radius:34px;
+text-align:center;
+box-shadow:0 25px 80px rgba(0,0,0,.35);
+}
+
+.section h2{
+font-family:'Playfair Display',serif;
+font-size:48px;
+color:#d4af37;
+margin-bottom:15px;
+text-align:center;
+}
+
+.divider{
+width:90px;
+height:2px;
+background:#d4af37;
+margin:0 auto 35px;
+}
+
+.intro{
+max-width:900px;
+margin:0 auto 35px;
+font-size:17px;
+line-height:1.9;
+color:#ddd;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
+}
+
+.card{
+background:rgba(0,0,0,.50);
+border:1px solid rgba(212,175,55,.22);
+border-radius:24px;
+padding:26px;
+transition:.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:rgba(212,175,55,.45);
+}
+
+.card h3{
+color:#d4af37;
+margin-bottom:12px;
+font-size:19px;
+}
+
+.card p{
+color:#ddd;
+line-height:1.7;
+font-size:15px;
+}
+
+/* FEATURE PHOTOS */
+
+.feature-photo{
+max-width:1200px;
+margin:0 auto 45px;
+border-radius:34px;
+overflow:hidden;
+border:1px solid rgba(212,175,55,.18);
+box-shadow:0 25px 80px rgba(0,0,0,.45);
+background:rgba(0,0,0,.55);
+}
+
+.feature-photo img{
+width:100%;
+height:580px;
+object-fit:cover;
+display:block;
+cursor:pointer;
+transition:.4s;
+}
+
+.feature-photo img:hover{
+transform:scale(1.025);
+}
+
+.feature-caption{
+padding:25px;
+text-align:center;
+}
+
+.feature-caption h2{
+font-family:'Playfair Display',serif;
+font-size:38px;
+color:#d4af37;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:16px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:18px;
+border:1px solid rgba(212,175,55,.20);
+cursor:pointer;
+transition:.35s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+.notice{
+max-width:950px;
+margin:auto;
+padding:38px;
+border-radius:28px;
+background:rgba(212,175,55,.12);
+border:1px solid rgba(212,175,55,.35);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:45px 7%;
+background:rgba(0,0,0,.78);
+border-top:1px solid rgba(212,175,55,.30);
+color:#ccc;
+line-height:1.8;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:22px;
+right:22px;
+background:#25D366;
+color:white;
+padding:16px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:800;
+z-index:999;
+}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+z-index:9999;
+inset:0;
+background:rgba(0,0,0,.94);
+align-items:center;
+justify-content:center;
+padding:30px;
+}
+
+.modal img{
+max-width:95%;
+max-height:90%;
+border-radius:18px;
+}
+
+.modal span{
+position:absolute;
+top:25px;
+right:35px;
+font-size:42px;
+color:#d4af37;
+cursor:pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+.navbar{
+flex-direction:column;
+gap:10px;
+}
+
+.nav-links{
+justify-content:center;
+gap:14px;
+}
+
+.logo-main{
+width:220px;
+}
+
+h1{
+font-size:43px;
+}
+
+.sub{
+font-size:18px;
+}
+
+.price{
+font-size:34px;
+}
+
+.hero{
+padding:190px 6% 85px;
+}
+
+.section{
+padding:55px 6%;
+border-radius:24px;
+}
+
+.section h2{
+font-size:34px;
+}
+
+.feature-photo img{
+height:300px;
+}
+
+.feature-caption h2{
+font-size:28px;
+}
+
+.gallery img{
+height:210px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<img src="images/logo.png" alt="Torrez & Maldonado">
+
+<div class="nav-links">
+<a href="#resumen">Resumen</a>
+<a href="#fachadas">Fachadas</a>
+<a href="#caracteristicas">Características</a>
+<a href="#galeria">Galería</a>
+<a href="#ubicacion">Ubicación</a>
+<a href="#contacto">Contacto</a>
+<button class="music-btn" onclick="activarMusica()">🎵 Música</button>
+</div>
+
+</nav>
+
+<header class="hero">
+
+<div class="hero-content">
+
+<img src="images/logo.png" class="logo-main" alt="Torrez & Maldonado">
+
+<div class="badge">Propiedad en venta · Puerto Vallarta</div>
+
+<h1>Casa Unifamiliar | El Salitrillo</h1>
+
+<p class="sub">
+Colonia El Salitrillo · Puerto Vallarta, México
+</p>
+
+<div class="price">$2,400,000 MXN</div>
+
+<p class="cash">
+Venta únicamente de contado
+</p>
+
+<div>
+<a class="btn" href="https://wa.me/523221077202?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Casa%20Salitrillo%20en%20Puerto%20Vallarta." target="_blank">
+Solicitar información
+</a>
+
+<a class="btn btn-outline" href="#galeria">
+Ver galería
+</a>
+
+<a class="btn btn-outline" href="#ubicacion">
+Ubicación
+</a>
+</div>
+
+</div>
+
+</header>
+
+<section class="section" id="resumen">
+
+<h2>Resumen de Propiedad</h2>
+<div class="divider"></div>
+
+<p class="intro">
+Casa de dos plantas construida con ladrillo rojo y materiales de buena calidad. Una propiedad amplia, funcional y sólida, ideal para quienes buscan una casa familiar con espacios generosos en Puerto Vallarta.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Terreno</h3>
+<p>8 × 16 m</p>
+</div>
+
+<div class="card">
+<h3>Recámaras</h3>
+<p>3 recámaras + estudio</p>
+</div>
+
+<div class="card">
+<h3>Baños</h3>
+<p>4 baños completos</p>
+</div>
+
+<div class="card">
+<h3>Niveles</h3>
+<p>2 plantas + pequeña bodega en tercer nivel</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="fachada">
+
+<div class="feature-photo">
+<img src="images/fachada-1.jpg" class="zoomable" alt="Fachada Casa Salitrillo">
+<div class="feature-caption">
+<h2>Fachada Principal</h2>
+</div>
+</div>
+
+<div class="feature-photo">
+<img src="images/fachada-2.jpg" class="zoomable" alt="Acceso Casa Salitrillo">
+<div class="feature-caption">
+<h2>Vista Exterior</h2>
+</div>
+</div>
+
+</section>
+
+<section class="section" id="caracteristicas">
+
+<h2>Características</h2>
+<div class="divider"></div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Construcción sólida</h3>
+<p>Ladrillo rojo, materiales de calidad y cimentación reforzada de 1.5 × 1.5 m.</p>
+</div>
+
+<div class="card">
+<h3>Espacios amplios</h3>
+<p>Sala, comedor y cocina amplia con barra sencilla.</p>
+</div>
+
+<div class="card">
+<h3>Área social</h3>
+<p>Cochera amplia con macetero y barra para convivios.</p>
+</div>
+
+<div class="card">
+<h3>Patios</h3>
+<p>Patio trasero y patio en segunda planta.</p>
+</div>
+
+<div class="card">
+<h3>Accesos</h3>
+<p>Cancel y puerta principal.</p>
+</div>
+
+<div class="card">
+<h3>Área de lavado</h3>
+<p>Área de lavado cubierta con lámina de asbesto.</p>
+</div>
+
+<div class="card">
+<h3>Bodega</h3>
+<p>Pequeña bodega en tercer piso.</p>
+</div>
+
+<div class="card">
+<h3>Valor diferencial</h3>
+<p>No es casa de molde ni construcción típica de Infonavit.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Por qué considerar esta propiedad</h2>
+<div class="divider"></div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Casa unifamiliar</h3>
+<p>Distribución funcional para familias que necesitan amplitud y espacios independientes.</p>
+</div>
+
+<div class="card">
+<h3>Construcción tradicional</h3>
+<p>Materiales sólidos y mayor sensación de permanencia.</p>
+</div>
+
+<div class="card">
+<h3>Precio competitivo</h3>
+<p>Oportunidad dentro de Puerto Vallarta por $2.4 MDP.</p>
+</div>
+
+<div class="card">
+<h3>Zona habitacional</h3>
+<p>Ubicada en col. El Salitrillo, Puerto Vallarta.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="galeria">
+
+<h2>Galería Fotográfica</h2>
+<div class="divider"></div>
+
+<div class="gallery">
+
+<img src="images/salitrillo-01.jpg" class="zoomable" alt="Casa Salitrillo 1">
+<img src="images/salitrillo-02.jpg" class="zoomable" alt="Casa Salitrillo 2">
+<img src="images/salitrillo-03.jpg" class="zoomable" alt="Casa Salitrillo 3">
+<img src="images/salitrillo-04.jpg" class="zoomable" alt="Casa Salitrillo 4">
+<img src="images/salitrillo-05.jpg" class="zoomable" alt="Casa Salitrillo 5">
+<img src="images/salitrillo-06.jpg" class="zoomable" alt="Casa Salitrillo 6">
+<img src="images/salitrillo-07.jpg" class="zoomable" alt="Casa Salitrillo 7">
+<img src="images/salitrillo-08.jpg" class="zoomable" alt="Casa Salitrillo 8">
+<img src="images/salitrillo-09.jpg" class="zoomable" alt="Casa Salitrillo 9">
+<img src="images/salitrillo-10.jpg" class="zoomable" alt="Casa Salitrillo 10">
+<img src="images/salitrillo-11.jpg" class="zoomable" alt="Casa Salitrillo 11">
+<img src="images/salitrillo-12.jpg" class="zoomable" alt="Casa Salitrillo 12">
+<img src="images/salitrillo-13.jpg" class="zoomable" alt="Casa Salitrillo 13">
+<img src="images/salitrillo-14.jpg" class="zoomable" alt="Casa Salitrillo 14">
+<img src="images/salitrillo-15.jpg" class="zoomable" alt="Casa Salitrillo 15">
+<img src="images/salitrillo-16.jpg" class="zoomable" alt="Casa Salitrillo 16">
+
+</div>
+
+</section>
+
+<section class="section" id="ubicacion">
+
+<h2>Ubicación</h2>
+<div class="divider"></div>
+
+<p class="intro">
+Colonia El Salitrillo · Puerto Vallarta, México.
+</p>
+
+<a class="btn" href="https://maps.app.goo.gl/VSrxzSmHTZbkqtKp6" target="_blank">
+Ver ubicación en Google Maps
+</a>
+
+</section>
+
+<section class="section" id="contacto">
+
+<div class="notice">
+
+<h2>Solicita información</h2>
+
+<p class="intro">
+Agenda una visita o solicita más detalles sobre Casa Unifamiliar El Salitrillo.
+</p>
+
+<a class="btn" href="https://wa.me/523221077202?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Casa%20Salitrillo%20en%20Puerto%20Vallarta." target="_blank">
+WhatsApp
+</a>
+
+<a class="btn btn-outline" href="https://ventasrodrigomaldonado-ux.github.io/VERONICA-TORREZ-PERFIL/" target="_blank">
+Conoce al asesor
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p><strong>Torrez & Maldonado Real Estate Solutions</strong></p>
+<p>Casa Unifamiliar El Salitrillo · Puerto Vallarta, México</p>
+<p>WhatsApp: +52 322 107 7202</p>
+<p>E-mail:   licenciadatorrez08@gmail.com</p>
+
+</footer>
+
+<audio id="musica" loop>
+<source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<a href="https://wa.me/523221077202?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Casa%20Salitrillo%20en%20Puerto%20Vallarta." class="whatsapp-float" target="_blank">
+💬
+</a>
+
+<div class="modal" id="imgModal">
+<span onclick="cerrarModal()">×</span>
+<img id="modalImg">
+</div>
+
+<script>
+function activarMusica(){
+const audio = document.getElementById("musica");
+audio.play();
+}
+
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImg");
+
+document.querySelectorAll(".zoomable").forEach(img=>{
+img.addEventListener("click",()=>{
+modal.style.display="flex";
+modalImg.src=img.src;
+});
+});
+
+function cerrarModal(){
+modal.style.display="none";
+}
+
+modal.addEventListener("click",e=>{
+if(e.target === modal){
+cerrarModal();
+}
+});
+</script>
+
+</body>
+</html>
